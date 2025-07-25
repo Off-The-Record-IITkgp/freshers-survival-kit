@@ -2,22 +2,22 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #1c1c2e; /* deep mystical blue-black */
-  color: #e0e0e0; /* soft silver-white text */
+  background-color: #121821; /* deeper cool dark blue */
+  color: #e0e0e0;
   line-height: 1.7;
 }
 
 /* Header */
 .main-header {
-  background: linear-gradient(135deg, #281b34, #1c2e29); /* mystical purple-green blend */
+  background: linear-gradient(135deg, #2e1b47, #142d34); /* royal purple to dark teal */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #e0c76f; /* muted gold underline */
+  border-bottom: 4px solid #d9b969; /* rich gold */
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #f0f0f0;
+  color: #fff;
   margin-bottom: 10px;
 }
 
@@ -45,26 +45,26 @@ body {
 }
 
 .card {
-  background: #2d2d3d; /* dark slate */
+  background: #1e1c2d; /* subtle purple-black contrast */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  color: #dcdcdc;
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  color: #f0f0f0;
+  border: 2px solid rgba(200, 200, 255, 0.05);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
   transition: all 0.25s ease;
   font-size: 1.2rem;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #c09f45; /* soft antique gold on hover */
-  box-shadow: 0 8px 18px rgba(255, 215, 0, 0.15);
+  transform: translateY(-6px);
+  border-color: #cfa84a; /* gold edge */
+  box-shadow: 0 8px 18px rgba(255, 215, 0, 0.2);
 }
 
 .card a {
   text-decoration: none;
-  color: #aa99ff; /* mystical violet */
+  color: #bdaaff; /* moonlit lavender */
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -73,28 +73,28 @@ body {
 /* Back Button */
 .back-home {
   display: inline-block;
-  background-color: #3e2f5b; /* purple-brown */
+  background-color: #b93c47; /* deep ruby red */
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   margin: 20px 0;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .back-home:hover {
-  background-color: #2a4435; /* deep enchanted green */
+  background-color: #8b2d39; /* deeper crimson on hover */
 }
 
 /* Section Boxes */
 section {
-  background: rgba(255, 255, 255, 0.05);
+  background: #1a222d; /* slate-blue black box */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
   max-width: 900px;
-  border: 1px solid rgba(200, 200, 200, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Footer */
@@ -102,7 +102,7 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  background: linear-gradient(to right, #1b1b2f, #2c1d2d); /* twilight purple-brown blend */
-  border-top: 4px solid #3d5c3d; /* forest green */
+  color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to right, #1b1b2f, #2c1d2d);
+  border-top: 4px solid #3d5c3d;
 }
