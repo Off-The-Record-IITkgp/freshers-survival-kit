@@ -2,22 +2,22 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #121821; /* deeper cool dark blue */
-  color: #e0e0e0;
+  background-color: #1B2431; /* Gunmetal */
+  color: #E0D7C7; /* Bone for text */
   line-height: 1.7;
 }
 
 /* Header */
 .main-header {
-  background: linear-gradient(135deg, #2e1b47, #142d34); /* royal purple to dark teal */
+  background-color: #539AA0; /* Moonstone */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #d9b969; /* rich gold */
+  border-bottom: 4px solid #BE9F89; /* Lion */
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #fff;
+  color: #E0D7C7; /* Bone */
   margin-bottom: 10px;
 }
 
@@ -31,7 +31,7 @@ body {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
-  color: #e0e0e0;
+  color: #E0D7C7;
 }
 
 /* Card Grid */
@@ -45,26 +45,26 @@ body {
 }
 
 .card {
-  background: #1e1c2d; /* subtle purple-black contrast */
+  background: #2A2F3B; /* slightly lighter than Gunmetal */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  color: #f0f0f0;
-  border: 2px solid rgba(200, 200, 255, 0.05);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  color: #E0D7C7;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   transition: all 0.25s ease;
   font-size: 1.2rem;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: #cfa84a; /* gold edge */
-  box-shadow: 0 8px 18px rgba(255, 215, 0, 0.2);
+  transform: translateY(-5px);
+  border-color: #BE9F89; /* Lion */
+  box-shadow: 0 8px 18px rgba(190, 159, 137, 0.3);
 }
 
 .card a {
   text-decoration: none;
-  color: #bdaaff; /* moonlit lavender */
+  color: #98C3C7; /* Light Blue */
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -73,9 +73,9 @@ body {
 /* Back Button */
 .back-home {
   display: inline-block;
-  background-color: #b93c47; /* deep ruby red */
-  color: white;
-  padding: 12px 24px;
+  background-color: #BE9F89; /* Lion */
+  color: #1B2431; /* Gunmetal text */
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -84,17 +84,18 @@ body {
 }
 
 .back-home:hover {
-  background-color: #8b2d39; /* deeper crimson on hover */
+  background-color: #98C3C7; /* Light Blue hover */
+  color: #1B2431;
 }
 
 /* Section Boxes */
 section {
-  background: #1a222d; /* slate-blue black box */
+  background: #25313D; /* deeper than card */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
   max-width: 900px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Footer */
@@ -102,7 +103,7 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
-  background: linear-gradient(to right, #1b1b2f, #2c1d2d);
-  border-top: 4px solid #3d5c3d;
+  color: rgba(224, 215, 199, 0.9);
+  background-color: #1B2431; /* Gunmetal */
+  border-top: 4px solid #539AA0; /* Moonstone */
 }
