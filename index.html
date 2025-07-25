@@ -1,107 +1,52 @@
-/* Global Body */
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  margin: 0;
-  background-color: #faf9f7; /* very light warm background */
-  color: rgb(44,38,63); /* deep charcoal for text */
-  line-height: 1.7;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Off The Record | IIT KGP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>Off The Record | IIT KGP</h1>
+    <p>Unspoken tips, hacks & survival guide for freshers</p>
+  </header>
 
-/* Header */
-.main-header {
-  background: rgb(89,80,130); /* muted violet */
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 4px solid rgb(248,198,98); /* gold underline */
-}
+  <main>
+    <section class="intro">
+      <h2>Welcome to KGP</h2>
+      <p>This is your go-to survival guide for everything beyond academics: where to eat, what to buy, who to ask for help, and all the little things no one tells you.</p>
+    </section>
 
-.main-header h1 {
-  font-size: 2.8rem;
-  color: white;
-  margin-bottom: 10px;
-}
+    <section>
+      <h2>Explore</h2>
+      <div class="card-grid">
+        <div class="card">
+          <a href="things.html">🛒<br>College Essentials</a>
+        </div>
+        <div class="card">
+          <a href="clubs.html">🎭<br>Clubs & Societies</a>
+        </div>
+        <div class="card">
+          <a href="fests.html">🎉<br>Fests & Festivals</a>
+        </div>
+        <div class="card">
+          <a href="cheatsheet.html">📜<br>KGP Cheat Sheet</a>
+        </div>
+        <div class="card">
+          <a href="eateries.html">🍽<br>Food & Eateries</a>
+        </div>
+        <div class="card">
+          <a href="hospital.html">🏥<br>Medical Services</a>
+        </div>
+        <div class="card">
+          <a href="guesthouse.html">🏨<br>Guest House Booking</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.main-header p {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.8);
-}
-
-/* Intro Section */
-.intro {
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: center;
-  color: rgb(44,38,63);
-}
-
-/* Card Grid */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.card {
-  background: white;
-  border-radius: 15px;
-  padding: 30px 20px;
-  text-align: center;
-  color: rgb(44,38,63);
-  border: 2px solid rgba(89,80,130,0.1);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-  transition: all 0.25s ease;
-  font-size: 1.2rem;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: rgb(248,198,98); /* gold highlight on hover */
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-}
-
-.card a {
-  text-decoration: none;
-  color: rgb(89,80,130);
-  font-weight: bold;
-  font-size: 1.3rem;
-  display: block;
-}
-
-/* Back Button */
-.back-home {
-  display: inline-block;
-  background-color: rgb(89,80,130);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 20px 0;
-  transition: background-color 0.2s ease;
-}
-
-.back-home:hover {
-  background-color: rgb(65,100,74); /* olive green on hover */
-}
-
-/* Section Boxes */
-section {
-  background: rgba(248,198,98,0.15);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 900px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
-  background-color: rgb(44,38,63);
-  border-top: 4px solid rgb(33,55,34); /* forest green */
-}
+  <footer>
+    <p>Made with 🧡 by seniors at KGP</p>
+  </footer>
+</body>
+</html>
