@@ -47,6 +47,12 @@ section {
   border-radius: 8px;
 }
 
+nav a.active {
+  color: #a94c2f;
+  font-weight: bold;
+  border-bottom: 2px solid #a94c2f;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -55,3 +61,4 @@ footer {
   background-color: #fce9dc;
   border-top: 1px solid #f3d9c0;
 }
+
