@@ -2,14 +2,14 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #faf9f7; /* very light warm background */
+  background-color: rgb(65,100,74); /* light green warm background */
   color: rgb(44,38,63); /* deep charcoal for text */
   line-height: 1.7;
 }
 
 /* Header */
 .main-header {
-  background: rgb(89,80,130); /* muted violet */
+  background: rgb(44,38,63); /* muted violet */
   padding: 40px 20px;
   text-align: center;
   border-bottom: 4px solid rgb(248,198,98); /* gold underline */
