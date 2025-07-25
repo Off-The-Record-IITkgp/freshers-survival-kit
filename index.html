@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Off The Record | IIT KGP</title>
-  <link rel="stylesheet" href="style.css"> <!-- THIS links your CSS styling -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Off The Record | IIT KGP</h1>
-    <p>Your friendly guide to campus life beyond academics</p>
-  </header>
+  <!-- Load shared navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="things.html">College essentials</a>
-    <a href="clubs.html">Societies</a>
-    <a href="fests.html">Fests and festivals</a>
-    <a href="cheatsheet.html">Cheat Sheet</a>
-    <a href="eateries.html">Eateries</a>
-    <a href="hospital.html">Medical Services</a>
-    <a href="guesthouse.html">Guest House Booking</a>
-  </nav>
+        // Highlight active link
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll('#navbar a').forEach(link => {
+          if(link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
 
   <main>
     <section>
@@ -30,12 +32,17 @@
 
     <section>
       <h2>Want to contribute?</h2>
-      <p>Email us at <a href="mailto:OTR_IITkgp@proton.me">youraddress@proton.me</a></p>
+      <p>Email us at <a href="mailto:OTR_IITkgp@proton.me">OTR_IITkgp@proton.me</a></p>
     </section>
   </main>
 
-  <footer>
-    <p>Made with 🧡 by seniors at KGP</p>
-  </footer>
+  <!-- Load shared footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
 </body>
 </html>
+
