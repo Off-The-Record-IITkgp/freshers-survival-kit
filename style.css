@@ -1,24 +1,24 @@
-/* Light Pastel Cottagecore Mystical Theme (Violet-Green-Pink) */
+/* Light Pastel Cottagecore Mystical Theme (Colorful Pastels Inspired) */
 
 /* Global Body */
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #EADDD1; /* Soft warm beige */
-  color: #4F3C4C; /* Soft plum for primary text */
+  background-color: #FFF0F5; /* light pinkish base */
+  color: #4F3C4C; /* plum text */
   line-height: 1.7;
   background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
 }
 
 /* Header */
 .main-header {
-  background-color: #B7EDF7; /* Soft minty green */
+  background-color: #B7EDF7; /* pastel blue (new) */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #D4949D; /* Rose gold accent */
+  border-bottom: 4px solid #F7B8D5; /* soft pink */
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 12px rgba(85, 70, 100, 0.1);
+  box-shadow: 0 4px 12px rgba(79, 60, 76, 0.1);
 }
 
 .main-header h1 {
@@ -30,7 +30,7 @@ body {
 
 .main-header p {
   font-size: 1.2rem;
-  color: #8B7FAC; /* Soft violet */
+  color: #9C7ED6; /* pastel violet */
 }
 
 /* Intro Section */
@@ -38,8 +38,8 @@ body {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
-  color: #6D5A72; /* Muted lavender */
-  background-color: #DEC0AE; /* Soft peach base */
+  color: #6D5A72;
+  background-color: #FFF0D9; /* pastel peach */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
@@ -56,7 +56,7 @@ body {
 }
 
 .card {
-  background: #F0DDE0; /* Soft pink-violet */
+  background: #F9E8F0; /* light rose */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
@@ -77,19 +77,19 @@ body {
   width: 120%;
   height: 120%;
   background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.05;
+  opacity: 0.04;
   pointer-events: none;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #D4949D;
-  box-shadow: 0 8px 18px rgba(212, 148, 157, 0.2);
+  border-color: #F7B8D5;
+  box-shadow: 0 8px 18px rgba(247, 184, 213, 0.3);
 }
 
 .card a {
   text-decoration: none;
-  color: #8B7FAC; /* Soft violet */
+  color: #C384C6; /* pastel purple */
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -97,13 +97,13 @@ body {
 }
 
 .card a:hover {
-  color: #A46C93; /* Plum */
+  color: #A46C93; /* deeper plum */
 }
 
 /* Back Button */
 .back-home {
   display: inline-block;
-  background-color: #D8CAD5; /* Dusty pink */
+  background-color: #FAD8D6; /* soft coral pink */
   color: #4F3C4C;
   padding: 10px 20px;
   border-radius: 8px;
@@ -115,13 +115,13 @@ body {
 }
 
 .back-home:hover {
-  background-color: #DEC1DB; /* Warm blush */
-  color: #6C7B6B; /* Desaturated sage */
+  background-color: #FFF7D6; /* pastel yellow */
+  color: #6C7B6B; /* soft sage */
 }
 
 /* Section Boxes */
 section {
-  background: #F0E2E8; /* Muted mauve */
+  background: #EDE7FA; /* dusty lavender */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -137,6 +137,6 @@ footer {
   padding: 30px;
   font-size: 0.9rem;
   color: rgba(79, 60, 76, 0.8);
-  background-color: #E7DAD9; /* Soft rose mist */
-  border-top: 4px solid #B7D1B7; /* Pastel green */
+  background-color: #F7E3F3; /* muted pink-violet */
+  border-top: 4px solid #B7EDF7; /* pastel blue header match */
 }
