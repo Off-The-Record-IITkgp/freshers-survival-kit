@@ -2,28 +2,28 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #3B6246; /* Deep Forest Green */
-  color: #C7D9E0; /* Soft Light Blue for warm readable text */
+  background-color: #1C172A; /* Rich Black-Violet */
+  color: #D8C0CB; /* Soft dusty pink-purple text */
   line-height: 1.7;
 }
 
 /* Header */
 .main-header {
-  background-color: #42274E; /* purple */
+  background-color: #654B80; /* Muted Plum-Violet */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #A25F2C; /* Rich Brown (Lion) */
+  border-bottom: 4px solid #BE9F89; /* Gold accent */
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #1B2431; /* Deep Navy */
+  color: #AADBE3; /* Soft pastel blue for contrast */
   margin-bottom: 10px;
 }
 
 .main-header p {
   font-size: 1.2rem;
-  color: rgba(27, 36, 49, 0.8); /* Slightly transparent navy text */
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Intro Section */
@@ -31,7 +31,7 @@ body {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
-  color: #C7D9E0; /* Light Blue Text */
+  color: #D8C0CB;
 }
 
 /* Card Grid */
@@ -45,26 +45,26 @@ body {
 }
 
 .card {
-  background: #2A2F3B; /* Navy Blue base for contrast */
+  background: #2B2039; /* Deep dusty violet */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  color: #E0D7C7; /* Bone text inside card */
+  color: #EADFE6; /* Very soft pastel for card content */
   border: 2px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   transition: all 0.25s ease;
   font-size: 1.2rem;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #BE9F89; /* Warm Brownish (Lion) on hover */
+  border-color: #BE9F89; /* Gold */
   box-shadow: 0 8px 18px rgba(190, 159, 137, 0.3);
 }
 
 .card a {
   text-decoration: none;
-  color: #98C3C7; /* Light Blue links */
+  color: #AC78CB; /* Lavender-purple */
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -72,14 +72,14 @@ body {
 }
 
 .card a:hover {
-  color: #BE9F89; /* Soft gold-tan hover */
+  color: #BE9F89; /* Gold on hover */
 }
 
 /* Back Button */
 .back-home {
   display: inline-block;
-  background-color: #6D3B3B; /* Deep Warm Brown */
-  color: #E0D7C7; /* Bone text */
+  background-color: #48293D; /* Muted plum */
+  color: #EADFE6;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -89,18 +89,19 @@ body {
 }
 
 .back-home:hover {
-  background-color: #98C3C7; /* Light Blue hover */
-  color: #1B2431; /* Navy text */
+  background-color: #BE9F89; /* Gold hover */
+  color: #1C172A; /* Dark contrast text */
 }
 
 /* Section Boxes */
 section {
-  background: #25313D; /* Deep Navy/Slate for separation */
+  background: #060409; /* Vampire Black */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
   max-width: 900px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #D8C0CB;
 }
 
 /* Footer */
@@ -108,7 +109,7 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(199, 217, 224, 0.9); /* Light Blue tone */
-  background-color: #1B2431; /* Gunmetal/Navy Footer */
-  border-top: 4px solid #6D3B3B; /* Brownish footer edge */
+  color: rgba(216, 192, 203, 0.9); /* Dusty pink text */
+  background-color: #060409; /* Deepest background */
+  border-top: 4px solid #768340; /* Old Moss Green accent */
 }
