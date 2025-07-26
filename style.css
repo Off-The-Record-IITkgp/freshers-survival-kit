@@ -2,28 +2,28 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #294A26; /* Gunmetal */
-  color: #CAC7E0; /* Bone for text */
+  background-color: #1B2431; /* Gunmetal – dark navy base */
+  color: #E0D7C7; /* Bone – warm off-white text */
   line-height: 1.7;
 }
 
 /* Header */
 .main-header {
-  background-color: #55A053; /* Moonstone */
+  background-color: #55A053; /* Earthy Green */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #A25F2C; /* Lion */
+  border-bottom: 4px solid #A25F2C; /* Lion – warm tan border */
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #CAC7E0; /* Bone */
+  color: #E0D7C7; /* Bone */
   margin-bottom: 10px;
 }
 
 .main-header p {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #E0D7C7; /* Bone – softened subtitle */
 }
 
 /* Intro Section */
@@ -45,7 +45,7 @@ body {
 }
 
 .card {
-  background: #2A2F3B; /* slightly lighter than Gunmetal */
+  background: #2A2F3B; /* Darker slate-blue for contrast */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
@@ -58,7 +58,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #BE9F89; /* Lion */
+  border-color: #BE9F89; /* Lion highlight */
   box-shadow: 0 8px 18px rgba(190, 159, 137, 0.3);
 }
 
@@ -68,29 +68,34 @@ body {
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #BE9F89; /* Lion hover */
 }
 
 /* Back Button */
 .back-home {
   display: inline-block;
   background-color: #BE9F89; /* Lion */
-  color: #1B2431; /* Gunmetal text */
+  color: #1B2431; /* Gunmetal text on light button */
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   margin: 20px 0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .back-home:hover {
-  background-color: #98C3C7; /* Light Blue hover */
-  color: #1B2431;
+  background-color: #98C3C7; /* Light Blue */
+  color: #1B2431; /* Consistent dark text */
 }
 
 /* Section Boxes */
 section {
-  background: #25313D; /* deeper than card */
+  background: #25313D; /* Deep slate for boxed sections */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -103,7 +108,8 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(224, 215, 199, 0.9);
+  color: rgba(224, 215, 199, 0.9); /* Bone semi-transparent */
   background-color: #1B2431; /* Gunmetal */
-  border-top: 4px solid #539AA0; /* Moonstone */
+  border-top: 4px solid #539AA0; /* Moonstone – soft accent */
 }
+
