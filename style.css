@@ -12,10 +12,10 @@ body {
 
 /* Header */
 .main-header {
-  background-color: #98E6B3; /* pastel GREEN (new) */
+  background-color: #B3B4FF; /* pastel blue */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #F7B8D5; /* soft pink */
+  border-bottom: 4px solid #898BFF; /* darker blue */
   position: relative;
   z-index: 1;
   box-shadow: 0 4px 12px rgba(79, 60, 76, 0.1);
@@ -56,7 +56,7 @@ body {
 }
 
 .card {
-  background: #F9E8F0; /* light rose */
+  background: #FFDCED; /* light rose */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
