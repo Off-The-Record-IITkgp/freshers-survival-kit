@@ -2,28 +2,28 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #3B6246; /* Gunmetal – dark navy base */
-  color: #E0D7C7; /* Bone – warm off-white text */
+  background-color: #3B6246; /* Deep Forest Green */
+  color: #C7D9E0; /* Soft Light Blue for warm readable text */
   line-height: 1.7;
 }
 
 /* Header */
 .main-header {
-  background-color: #55A053; /* Earthy Green */
+  background-color: #98C3C7; /* Light Blue */
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #A25F2C; /* Lion – warm tan border */
+  border-bottom: 4px solid #A25F2C; /* Rich Brown (Lion) */
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #E0D7C7; /* Bone */
+  color: #1B2431; /* Deep Navy */
   margin-bottom: 10px;
 }
 
 .main-header p {
   font-size: 1.2rem;
-  color: #E0D7C7; /* Bone – softened subtitle */
+  color: rgba(27, 36, 49, 0.8); /* Slightly transparent navy text */
 }
 
 /* Intro Section */
@@ -31,7 +31,7 @@ body {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
-  color: #E0D7C7;
+  color: #C7D9E0; /* Light Blue Text */
 }
 
 /* Card Grid */
@@ -45,11 +45,11 @@ body {
 }
 
 .card {
-  background: #2A2F3B; /* Darker slate-blue for contrast */
+  background: #2A2F3B; /* Navy Blue base for contrast */
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  color: #E0D7C7;
+  color: #E0D7C7; /* Bone text inside card */
   border: 2px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   transition: all 0.25s ease;
@@ -58,13 +58,13 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #BE9F89; /* Lion highlight */
+  border-color: #BE9F89; /* Warm Brownish (Lion) on hover */
   box-shadow: 0 8px 18px rgba(190, 159, 137, 0.3);
 }
 
 .card a {
   text-decoration: none;
-  color: #98C3C7; /* Light Blue */
+  color: #98C3C7; /* Light Blue links */
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -72,14 +72,14 @@ body {
 }
 
 .card a:hover {
-  color: #BE9F89; /* Lion hover */
+  color: #BE9F89; /* Soft gold-tan hover */
 }
 
 /* Back Button */
 .back-home {
   display: inline-block;
-  background-color: #BE9F89; /* Lion */
-  color: #1B2431; /* Gunmetal text on light button */
+  background-color: #6D3B3B; /* Deep Warm Brown */
+  color: #E0D7C7; /* Bone text */
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -89,13 +89,13 @@ body {
 }
 
 .back-home:hover {
-  background-color: #98C3C7; /* Light Blue */
-  color: #1B2431; /* Consistent dark text */
+  background-color: #98C3C7; /* Light Blue hover */
+  color: #1B2431; /* Navy text */
 }
 
 /* Section Boxes */
 section {
-  background: #25313D; /* Deep slate for boxed sections */
+  background: #25313D; /* Deep Navy/Slate for separation */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -108,8 +108,7 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(224, 215, 199, 0.9); /* Bone semi-transparent */
-  background-color: #1B2431; /* Gunmetal */
-  border-top: 4px solid #539AA0; /* Moonstone – soft accent */
+  color: rgba(199, 217, 224, 0.9); /* Light Blue tone */
+  background-color: #1B2431; /* Gunmetal/Navy Footer */
+  border-top: 4px solid #6D3B3B; /* Brownish footer edge */
 }
-
