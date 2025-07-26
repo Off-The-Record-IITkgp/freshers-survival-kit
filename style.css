@@ -12,7 +12,7 @@ body {
 
 /* Header */
 .main-header {
-  background-color: #B7EDF7; /* pastel blue (new) */
+  background-color: #C9FFD9; /* pastel GREEN (new) */
   padding: 40px 20px;
   text-align: center;
   border-bottom: 4px solid #F7B8D5; /* soft pink */
@@ -39,7 +39,7 @@ body {
   margin: 40px auto;
   text-align: center;
   color: #6D5A72;
-  background-color: #FFF0D9; /* pastel peach */
+  background-color: #F7C6C6; /* pastel PINK */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
