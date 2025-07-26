@@ -3,61 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Up Next – KGP Fests</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>KGP Fests & Festivals</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Card Layout */
+    .card {
+      background: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.01);
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #2C263F;
+    }
+    .card-content {
+      display: none;
+      margin-top: 15px;
+      color: #333;
+    }
+    .card.active .card-content {
+      display: block;
+    }
+    .icon {
+      font-size: 1.6rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🎉 Coming Up Next</h1>
+    <h1>🎉 KGP Fests & Festivals</h1>
   </header>
 
   <main>
-    <section>
-      <h2>🌸 Spring Fest (SF)</h2>
-      <p>
-        KGP’s flagship cultural fest held in January. Includes concerts, dance, dramatics, fashion shows, stand-up comedy, and more. Expect crowds, food stalls, and pro-nights with celebrities!
-      </p>
-    </section>
+    <div class="card">
+      <h2>⚙️ Techno Fest <span class="icon">+</span></h2>
+      <div class="card-content">
+        <p><strong>Kshitij (KTJ):</strong> Asia’s largest techno-management fest, held in January–February. Features robotics, design, coding, AI, management competitions, industry talks, and exhibitions.</p>
+      </div>
+    </div>
 
-    <section>
-      <h2>⚙️ Kshitij (KTJ)</h2>
-      <p>
-        Asia’s largest techno-management fest. January–February. Features robotics, design, coding, AI, and management competitions. Also hosts industry talks and exhibitions.
-      </p>
-    </section>
+    <div class="card">
+      <h2>🎭 Cultural Fest <span class="icon">+</span></h2>
+      <div class="card-content">
+        <p><strong>Spring Fest (SF):</strong> KGP’s flagship cultural festival, usually in January. Includes concerts, dance, dramatics, fashion shows, stand-up comedy, pro-nights, and a buzzing food scene.</p>
+      </div>
+    </div>
 
-    <section>
-      <h2>📚 Department & Society Fests</h2>
-      <ul>
-        <li><strong>ChemClave</strong> (Chem Engg)</li>
-        <li><strong>Mechafest</strong> (Mechanical)</li>
-        <li><strong>Composit’23</strong> (Aerospace)</li>
-        <li><strong>Infest</strong> (Innovation Cell)</li>
-        <li><strong>Spark</strong> (Entrepreneurship Cell)</li>
-        <li><strong>Galaxy, Literati, Jam, etc.</strong> (From clubs like Debsoc, Dramsoc, DC++)</li>
-      </ul>
-    </section>
+    <div class="card">
+      <h2>🏆 Sports Fest <span class="icon">+</span></h2>
+      <div class="card-content">
+        <p><strong>Shaurya:</strong> The inter-college sports fest with competitions in athletics, football, cricket, and other major sports, bringing together participants from across India.</p>
+      </div>
+    </div>
 
-    <section>
-      <h2>🧑‍🎓 Freshers & Farewells</h2>
-      <p>
-        Informal fests for bonding and celebration. Usually organized hall-wise or department-wise. Most are costume-themed and have food, games, and performances.
-      </p>
-    </section>
+    <div class="card">
+      <h2>🪔 Festivals <span class="icon">+</span></h2>
+      <div class="card-content">
+        <ul>
+          <li><strong>Illumination (Diwali):</strong> Iconic DIY diya and candle lighting structures, a hallmark of KGP tradition.</li>
+          <li><strong>Dussehra:</strong> Celebrated with cultural programs and traditional festivities.</li>
+          <li><strong>Holi:</strong> Colorful celebrations across halls and campus grounds.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section>
-      <h2>🔔 How to Stay Updated</h2>
-      <ul>
-        <li>Join your batch’s <strong>Telegram/WhatsApp</strong> groups</li>
-        <li>Follow <strong>Gymkhana & Hall Instagrams</strong></li>
-        <li>Check notice boards near Tikka, Cheddi, or library</li>
-        <li>Club pages and word-of-mouth are key</li>
-      </ul>
-    </section>
+    <div class="card">
+      <h2>📚 Department Fests <span class="icon">+</span></h2>
+      <div class="card-content">
+        <ul>
+          <li><strong>ChemClave</strong> (Chemical Engineering)</li>
+          <li><strong>Mechafest</strong> (Mechanical Engineering)</li>
+          <li><strong>Composit</strong> (Aerospace)</li>
+          <li><strong>Infest</strong> (Innovation Cell)</li>
+          <li><strong>Spark</strong> (Entrepreneurship Cell)</li>
+          <li><strong>Galaxy, Literati, JAM, etc.</strong> (DebSoc, Dramsoc, DC++)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🌏 Regional Fests <span class="icon">+</span></h2>
+      <div class="card-content">
+        <ul>
+          <li><strong>North East Fest</strong> (Celebrating culture of the NE states)</li>
+          <li><strong>Tamil Fest</strong> (By Tamil Sangam)</li>
+          <li><strong>Rajasthani Fest</strong> (By Rajasthani Students’ Association)</li>
+          <li><strong>Telugu Fest</strong> (By Telugu Cultural Group)</li>
+          <li>And many more regional celebrations organized by student associations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔔 How to Stay Updated <span class="icon">+</span></h2>
+      <div class="card-content">
+        <ul>
+          <li>Join your batch’s <strong>Telegram/WhatsApp</strong> groups</li>
+          <li>Follow <strong>Gymkhana & Hall Instagram pages</strong></li>
+          <li>Check for posters in halls</li>
+          <li>Word-of-mouth & club pages are the fastest way to get updates</li>
+        </ul>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>Made with 🧡 by a KGPian</p>
   </footer>
+
+  <script>
+    // Collapsible cards
+    document.querySelectorAll('.card h2').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.parentElement;
+        card.classList.toggle('active');
+        header.querySelector('.icon').textContent = card.classList.contains('active') ? '-' : '+';
+      });
+    });
+  </script>
 </body>
 </html>
