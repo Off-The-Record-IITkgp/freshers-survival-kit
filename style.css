@@ -121,7 +121,7 @@ body {
 
 /* Section Boxes */
 section {
-  background: #EDE7FA; /* dusty lavender */
+  background: #CBB3FF; /* dusty lavender */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -138,5 +138,5 @@ footer {
   font-size: 0.9rem;
   color: rgba(79, 60, 76, 0.8);
   background-color: #F7E3F3; /* muted pink-violet */
-  border-top: 4px solid #B7EDF7; /* pastel blue header match */
+  border-top: 4px solid #FBB9B9; /* pastel PINK header match */
 }
