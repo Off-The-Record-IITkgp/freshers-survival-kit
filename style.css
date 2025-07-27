@@ -1,36 +1,55 @@
-/* Light Pastel Cottagecore Mystical Theme (Colorful Pastels Inspired) */
-
 /* Global Body */
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #FFF0F5; /* light pinkish base */
-  color: #4F3C4C; /* plum text */
+  background-color: #1C172A;
+  color: #D8C0CB;
   line-height: 1.7;
-  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Sparkle Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.04;
+  animation: sparkleMove 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes sparkleMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -50px); }
 }
 
 /* Header */
 .main-header {
-  background-color: #B3B4FF; /* pastel blue */
+  background-color: #654B80;
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #898BFF; /* darker blue */
+  border-bottom: 4px solid #BE9F89;
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 12px rgba(79, 60, 76, 0.1);
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #4F3C4C;
+  color: #AADBE3;
   margin-bottom: 10px;
-  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(172, 120, 203, 0.3);
 }
 
 .main-header p {
   font-size: 1.2rem;
-  color: #9C7ED6; /* pastel violet */
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Intro Section */
@@ -38,11 +57,9 @@ body {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
-  color: #6D5A72;
-  background-color: #F7C6C6; /* pastel PINK */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  color: #D8C0CB;
+  position: relative;
+  z-index: 1;
 }
 
 /* Card Grid */
@@ -53,43 +70,33 @@ body {
   padding: 30px;
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
-  background: #FFDCED; /* light rose */
+  background: #2B2039;
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  color: #4F3C4C;
-  border: 2px solid rgba(172, 176, 204, 0.2);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  color: #EADFE6;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   transition: all 0.25s ease;
   font-size: 1.2rem;
   position: relative;
-  overflow: hidden;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.04;
-  pointer-events: none;
+  z-index: 1;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #F7B8D5;
-  box-shadow: 0 8px 18px rgba(247, 184, 213, 0.3);
+  border-color: #BE9F89;
+  box-shadow: 0 8px 18px rgba(190, 159, 137, 0.3);
 }
 
 .card a {
   text-decoration: none;
-  color: #C384C6; /* pastel purple */
+  color: #AC78CB;
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -97,38 +104,42 @@ body {
 }
 
 .card a:hover {
-  color: #A46C93; /* deeper plum */
+  color: #BE9F89;
 }
 
 /* Back Button */
 .back-home {
   display: inline-block;
-  background-color: #FAD8D6; /* soft coral pink */
-  color: #4F3C4C;
+  background-color: #48293D;
+  color: #EADFE6;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   margin: 20px 0;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(172, 120, 203, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 .back-home:hover {
-  background-color: #FFF7D6; /* pastel yellow */
-  color: #6C7B6B; /* soft sage */
+  background-color: #BE9F89;
+  color: #1C172A;
+  box-shadow: 0 0 12px rgba(190, 159, 137, 0.4);
 }
 
 /* Section Boxes */
 section {
-  background: #CBB3FF; /* dusty lavender */
+  background: #060409;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
   max-width: 900px;
-  border: 1px solid rgba(172, 176, 204, 0.2);
-  color: #6D5A72;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #D8C0CB;
+  position: relative;
+  z-index: 1;
 }
 
 /* Footer */
@@ -136,7 +147,9 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(79, 60, 76, 0.8);
-  background-color: #F7E3F3; /* muted pink-violet */
-  border-top: 4px solid #FBB9B9; /* pastel PINK header match */
+  color: rgba(216, 192, 203, 0.9);
+  background-color: #060409;
+  border-top: 4px solid #768340;
+  position: relative;
+  z-index: 1;
 }
