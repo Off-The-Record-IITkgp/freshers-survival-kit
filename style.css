@@ -1,190 +1,220 @@
-/* Global Body */
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #0b0f1c, #1b1d2e, #2b1a24);
-  color: #e8dfe6;
-  line-height: 1.7;
-  position: relative;
-  overflow-x: hidden;
-  font-size: 1rem; /* ensure consistent body text size */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Essentials</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #dec0ae, #d4949d, #acb0cc);
+      color: #2C263F;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-/* Sparkle Overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
-  background-size: 90px 90px;
-  opacity: 0.05;
-  animation: sparkleMove 60s linear infinite;
-  pointer-events: none;
-  z-index: 0;
-}
+    /* Sparkle overlay (lighter version) */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+      background-image: radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.08;
+      animation: sparkleMove 80s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes sparkleMove {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(-80px,-80px); }
+    }
 
-@keyframes sparkleMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-60px, -60px); }
-}
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
 
-/* Header */
-.main-header {
-  background: linear-gradient(135deg, #2b2039, #3b2a4f, #654b80);
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 4px solid #c5a46d; /* gold accent */
-  position: relative;
-  z-index: 1;
-}
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #8b7fac, #acb0cc);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: linear-gradient(135deg, #a46c93, #5c63a4);
+      box-shadow: 0 4px 14px rgba(92,99,164,0.4);
+    }
 
-.main-header h1 {
-  font-size: 2.8rem;
-  color: #c5e1d4; /* soft green */
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(172, 120, 203, 0.5);
-}
+    /* Cards */
+    .card {
+      background: linear-gradient(145deg, #f7f3f5, #e9d9e2);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(92,99,164,0.2);
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(92,99,164,0.25);
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #2C263F;
+      cursor: pointer;
+    }
+    .icon {
+      font-size: 1.2rem;
+      color: #5c63a4;
+      transition: transform 0.3s ease;
+    }
+    .card.active .icon {
+      transform: rotate(45deg); /* ✦ rotates into ✧ style */
+      color: #a46c93;
+    }
 
-.main-header p {
-  font-size: 1.2rem;
-  color: #e8dfe6;
-  opacity: 0.85;
-}
+    /* Accordion content */
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      margin-top: 10px;
+    }
+    .card.active .card-content {
+      max-height: 500px; /* enough space for content */
+      opacity: 1;
+    }
+    .card-content ul {
+      padding-left: 20px;
+    }
 
-/* Intro Section */
-.intro {
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: center;
-  color: #e8dfe6;
-  position: relative;
-  background: linear-gradient(145deg, #182024, #1c2a2e, #2a3b35);
-  padding: 25px;
-  border-radius: 15px;
-  border: 1px solid rgba(197, 164, 109, 0.3);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #2C263F;
+      background: linear-gradient(135deg, #d8cad5, #acb0cc);
+      border-top: 3px solid #a46c93;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="index.html" class="back-btn">⮜ Back to Home</a>
 
-/* Card Grid */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
+    <div class="card">
+      <h2>College Essentials (Buy at Tech Market) <span class="icon">✦</span></h2>
+      <div class="card-content">
+        <ul>
+          <li><strong>Transport:</strong> Cycle</li>
+          <li><strong>Academic:</strong> FX-991 ES Plus Scientific Calculator</li>
+          <li><strong>Stationery:</strong>
+            <ul>
+              <li>5-subject notebook / multiple notebooks</li>
+              <li>Pens & pencils</li>
+              <li>Eraser & sharpener</li>
+              <li>Stapler & pins</li>
+              <li>Gum / glue</li>
+              <li>Whitener</li>
+            </ul>
+          </li>
+          <li><strong>Hostel Basics:</strong> Bucket, mug, water bottle, mattress, pillow, bedsheets (thin for summer + thick blankets for winter), towels, curtains (not needed for girl freshers — provided in halls), wall hooks</li>
+          <li><strong>Toiletries:</strong>
+            <ul>
+              <li>Toothbrush & toothpaste</li>
+              <li>Soap & shampoo</li>
+              <li>Detergent (liquid/powder)</li>
+              <li>Razor</li>
+              <li>Comb</li>
+            </ul>
+          </li>
+          <li><strong>Clothing & Seasonal:</strong> Slippers, shoes (mandatory for labs & fitness), a pair of formal wear (shirt, trouser, shoes), raincoat, umbrella, sweaters, hoodies, caps, arm coverage sleeves (if needed)</li>
+          <li><strong>Gadgets:</strong> Earphones/headphones, laptop (can be skipped until 2nd year if on budget), phone, extension box</li>
+          <li><strong>Other Must-Haves:</strong> Knife, scissors, medicines (fever, cough/cold, allergy meds, ORS), cleaning wipes, dustbin, laundry basket, kettle, laptop bag/waterproof bag</li>
+        </ul>
+      </div>
+    </div>
 
-.card {
-  background: linear-gradient(135deg, #2b2039, #3e2a3c, #442a2a);
-  border-radius: 15px;
-  padding: 30px 20px;
-  text-align: center;
-  color: #f1e8f0;
-  border: 2px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
-  transition: all 0.25s ease;
-  font-size: 1.2rem;
-  position: relative;
-  z-index: 1;
-}
+    <div class="card">
+      <h2>Things to Bring from Home <span class="icon">✦</span></h2>
+      <div class="card-content">
+        <ul>
+          <li><strong>Documents:</strong> Aadhar card, college allotment letter, JEE admit card, and other official documents</li>
+          <li><strong>Food:</strong> Pickles & snacks from home</li>
+        </ul>
+      </div>
+    </div>
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #c5a46d;
-  box-shadow: 0 8px 20px rgba(197, 164, 109, 0.4);
-}
+    <div class="card">
+      <h2>Optional Comfort Items <span class="icon">✦</span></h2>
+      <div class="card-content">
+        <ul>
+          <li>Study lamp</li>
+          <li>Organizer</li>
+          <li>Cooler/fan for hot summers</li>
+          <li>Calendar</li>
+          <li>Speaker</li>
+          <li>Idol of God (if religious)</li>
+        </ul>
+      </div>
+    </div>
 
-.card a {
-  font-weight: bold;
-  font-size: 1.3rem;
-  display: block;
-  color: #b68fd4;
-  position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  text-decoration: none; /* removes default underline */
-  cursor: pointer; /* make links always show pointer */
-}
+    <div class="card">
+      <h2>Things to Borrow (Secondhand from Seniors) <span class="icon">✦</span></h2>
+      <div class="card-content">
+        <ul>
+          <li>Lab coat for chemistry lab (used for only 1 semester)</li>
+          <li>Engineering drawing kit – drafter, tool box. (Not used again except for architecture, mechanical, civil and chemical departments.)</li>
+        </ul>
+      </div>
+    </div>
 
-/* Magical underline effect */
-.card a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -6px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #c5a46d, #b68fd4, #539aa0);
-  border-radius: 4px;
-  transition: width 0.35s ease;
-  opacity: 0.9;
-}
+    <div class="card">
+      <h2>Things to Buy Secondhand <span class="icon">✦</span></h2>
+      <div class="card-content">
+        <ul>
+          <li>Reference books</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
-/* Hover glow + underline animation */
-.card a:hover {
-  color: #c5a46d;
-  text-shadow: 0 0 6px rgba(197, 164, 109, 0.6),
-               0 0 14px rgba(182, 143, 212, 0.4);
-}
+  <footer>✦ © 2025 Off The Record | IIT KGP ✦</footer>
 
-.card a:hover::after {
-  width: 65%;
-}
-
-/* Collapsible card content (hidden by default) */
-.card-content {
-  max-height: 0;              /* fully collapsed */
-  overflow: hidden;           /* hide hidden text */
-  opacity: 0;                 /* invisible */
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-  margin-top: 0;              /* no spacing when hidden */
-}
-
-.card.active .card-content {
-  max-height: 800px;          /* enough to fit content */
-  opacity: 1;
-  margin-top: 10px;           /* spacing only when expanded */
-}
-
-.icon {
-  transition: transform 0.3s ease;
-  display: inline-block;
-  cursor: pointer; /* NEW: make ✦ icon clickable with pointer cursor */
-}
-
-.card.active .icon {
-  transform: rotate(45deg);   /* ✦ rotates */
-  color: #a46c93;             /* highlight color */
-}
-
-/* Section Boxes */
-section {
-  background: linear-gradient(145deg, #241a1a, #1b1621, #2e1c1f);
-  padding: 25px;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 900px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  color: #e8dfe6;
-  position: relative;
-  z-index: 1;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
-  color: rgba(232, 223, 230, 0.9);
-  background: linear-gradient(135deg, #1c1a15, #2d2218, #3b2a1f);
-  border-top: 4px solid #c5a46d;
-  position: relative;
-  z-index: 1;
-}
+  <script>
+    // Collapsible cards with ✦ icons
+    document.querySelectorAll('.card h2').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.parentElement;
+        card.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
