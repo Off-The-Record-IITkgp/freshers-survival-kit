@@ -99,19 +99,43 @@ body::before {
   border-color: #c5a46d;
   box-shadow: 0 8px 20px rgba(197, 164, 109, 0.4);
 }
-
 .card a {
-  text-decoration: none;
-  color: #b68fd4;
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
-  transition: color 0.3s ease;
+  color: #b68fd4;
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: none; /* removes default underline */
 }
 
+/* Magical underline effect */
+.card a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c5a46d, #b68fd4, #539aa0);
+  border-radius: 4px;
+  transition: width 0.35s ease;
+  opacity: 0.9;
+}
+
+/* Hover glow + underline animation */
 .card a:hover {
   color: #c5a46d;
+  text-shadow: 0 0 6px rgba(197, 164, 109, 0.6),
+               0 0 14px rgba(182, 143, 212, 0.4);
 }
+
+.card a:hover::after {
+  width: 65%;
+}
+
+
 
 /* Section Boxes */
 section {
