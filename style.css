@@ -135,6 +135,30 @@ body::before {
   width: 65%;
 }
 
+/* Collapsible card content (hidden by default) */
+.card-content {
+  max-height: 0;              /* fully collapsed */
+  overflow: hidden;           /* hide hidden text */
+  opacity: 0;                 /* invisible */
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  margin-top: 0;              /* no spacing when hidden */
+}
+
+.card.active .card-content {
+  max-height: 800px;          /* enough to fit content */
+  opacity: 1;
+  margin-top: 10px;           /* spacing only when expanded */
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.card.active .icon {
+  transform: rotate(45deg);   /* ✦ rotates */
+  color: #a46c93;             /* highlight color */
+}
 
 
 /* Section Boxes */
