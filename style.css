@@ -2,8 +2,8 @@
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #0B132B; /* Deep navy blue */
-  color: #E6D9E0; /* soft silver-pink */
+  background: linear-gradient(135deg, #0b0f1c, #1b1d2e, #2b1a24);
+  color: #e8dfe6;
   line-height: 1.7;
   position: relative;
   overflow-x: hidden;
@@ -17,39 +17,40 @@ body::before {
   left: 0;
   width: 200%;
   height: 200%;
-  background-image: radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px);
-  background-size: 120px 120px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 90px 90px;
   opacity: 0.05;
-  animation: sparkleMove 80s linear infinite;
+  animation: sparkleMove 60s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
 
 @keyframes sparkleMove {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(-80px, -80px); }
+  100% { transform: translate(-60px, -60px); }
 }
 
 /* Header */
 .main-header {
-  background-color: #51375B; /* deep violet */
+  background: linear-gradient(135deg, #2b2039, #3b2a4f, #654b80);
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 4px solid #D4AF37; /* gold accent */
+  border-bottom: 4px solid #c5a46d; /* gold accent */
   position: relative;
   z-index: 1;
 }
 
 .main-header h1 {
   font-size: 2.8rem;
-  color: #ACB0CC; /* soft violet-gray */
+  color: #c5e1d4; /* soft green */
   margin-bottom: 10px;
-  text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+  text-shadow: 0 0 10px rgba(172, 120, 203, 0.5);
 }
 
 .main-header p {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #e8dfe6;
+  opacity: 0.85;
 }
 
 /* Intro Section */
@@ -57,8 +58,13 @@ body::before {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
-  color: #E6D9E0;
+  color: #e8dfe6;
   position: relative;
+  background: linear-gradient(145deg, #182024, #1c2a2e, #2a3b35);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(197, 164, 109, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -75,26 +81,28 @@ body::before {
 }
 
 .card {
-  background: #1C172A; /* dark purple-navy */
+  background: linear-gradient(135deg, #2b2039, #3e2a3c, #442a2a);
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  color: #F0E6CF; /* parchment-like */
+  color: #f1e8f0;
   border: 2px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
   transition: all 0.25s ease;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: #D4AF37; /* gold */
-  box-shadow: 0 8px 18px rgba(212, 175, 55, 0.3);
+  border-color: #c5a46d;
+  box-shadow: 0 8px 20px rgba(197, 164, 109, 0.4);
 }
 
 .card a {
   text-decoration: none;
-  color: #8DA47E; /* muted green for links */
+  color: #b68fd4;
   font-weight: bold;
   font-size: 1.3rem;
   display: block;
@@ -102,38 +110,20 @@ body::before {
 }
 
 .card a:hover {
-  color: #BF616A; /* maroon-red */
-}
-
-/* Back Button */
-.back-home {
-  display: inline-block;
-  background-color: #48293D; /* maroon-purple */
-  color: #E6D9E0;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 20px 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
-}
-
-.back-home:hover {
-  background-color: #D4AF37; /* gold */
-  color: #060409;
-  box-shadow: 0 0 14px rgba(212, 175, 55, 0.4);
+  color: #c5a46d;
 }
 
 /* Section Boxes */
 section {
-  background: #132A13; /* deep forest green */
-  padding: 20px;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #241a1a, #1b1621, #2e1c1f);
+  padding: 25px;
+  border-radius: 12px;
   margin: 20px auto;
   max-width: 900px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #E6D9E0;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #e8dfe6;
+  position: relative;
+  z-index: 1;
 }
 
 /* Footer */
@@ -141,7 +131,9 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: rgba(230, 217, 224, 0.9);
-  background-color: #060409;
-  border-top: 4px solid #8B5E3C; /* warm brown */
+  color: rgba(232, 223, 230, 0.9);
+  background: linear-gradient(135deg, #1c1a15, #2d2218, #3b2a1f);
+  border-top: 4px solid #c5a46d;
+  position: relative;
+  z-index: 1;
 }
