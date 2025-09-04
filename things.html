@@ -5,46 +5,131 @@
   <title>College Essentials</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Card styling */
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #dec0ae, #d4949d, #acb0cc);
+      color: #2C263F;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Sparkle overlay (lighter version) */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 200%; height: 200%;
+      background-image: radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px);
+      background-size: 100px 100px;
+      opacity: 0.08;
+      animation: sparkleMove 80s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes sparkleMove {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(-80px,-80px); }
+    }
+
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #8b7fac, #acb0cc);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: linear-gradient(135deg, #a46c93, #5c63a4);
+      box-shadow: 0 4px 14px rgba(92,99,164,0.4);
+    }
+
+    /* Cards */
     .card {
-      background: #fff;
+      background: linear-gradient(145deg, #f7f3f5, #e9d9e2);
       margin: 20px 0;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(92,99,164,0.2);
+      overflow: hidden;
     }
     .card:hover {
-      transform: scale(1.01);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(92,99,164,0.25);
     }
     .card h2 {
       margin: 0;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #2C263F;
-    }
-    .card-content {
-      display: none;
-      margin-top: 15px;
-      color: #333;
-    }
-    .card.active .card-content {
-      display: block;
+      cursor: pointer;
     }
     .icon {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
+      color: #5c63a4;
+      transition: transform 0.3s ease;
+    }
+    .card.active .icon {
+      transform: rotate(45deg); /* ✦ rotates into ✧ style */
+      color: #a46c93;
+    }
+
+    /* Accordion content */
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      margin-top: 10px;
+    }
+    .card.active .card-content {
+      max-height: 500px; /* enough space for content */
+      opacity: 1;
+    }
+    .card-content ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #2C263F;
+      background: linear-gradient(135deg, #d8cad5, #acb0cc);
+      border-top: 3px solid #a46c93;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
-  <main style="padding: 20px;">
-    <p><a href="index.html" style="color:#a94c2f; text-decoration:none; font-weight:bold;">← Back to Home</a></p>
+  <main>
+    <a href="index.html" class="back-btn">⮜ Back to Home</a>
 
     <div class="card">
-      <h2>College Essentials (Buy at Tech Market) <span class="icon">+</span></h2>
+      <h2>College Essentials (Buy at Tech Market) <span class="icon">✦</span></h2>
       <div class="card-content">
         <ul>
           <li><strong>Transport:</strong> Cycle</li>
@@ -77,7 +162,7 @@
     </div>
 
     <div class="card">
-      <h2>Things to Bring from Home <span class="icon">+</span></h2>
+      <h2>Things to Bring from Home <span class="icon">✦</span></h2>
       <div class="card-content">
         <ul>
           <li><strong>Documents:</strong> Aadhar card, college allotment letter, JEE admit card, and other official documents</li>
@@ -87,7 +172,7 @@
     </div>
 
     <div class="card">
-      <h2>Optional Comfort Items <span class="icon">+</span></h2>
+      <h2>Optional Comfort Items <span class="icon">✦</span></h2>
       <div class="card-content">
         <ul>
           <li>Study lamp</li>
@@ -101,7 +186,7 @@
     </div>
 
     <div class="card">
-      <h2>Things to Borrow (Secondhand from Seniors) <span class="icon">+</span></h2>
+      <h2>Things to Borrow (Secondhand from Seniors) <span class="icon">✦</span></h2>
       <div class="card-content">
         <ul>
           <li>Lab coat for chemistry lab (used for only 1 semester)</li>
@@ -111,24 +196,23 @@
     </div>
 
     <div class="card">
-      <h2>Things to Buy Secondhand <span class="icon">+</span></h2>
+      <h2>Things to Buy Secondhand <span class="icon">✦</span></h2>
       <div class="card-content">
         <ul>
           <li>Reference books</li>
         </ul>
       </div>
     </div>
-
   </main>
-  <footer>© 2025 Off The Record | IIT KGP</footer>
+
+  <footer>✦ © 2025 Off The Record | IIT KGP ✦</footer>
 
   <script>
-    // Collapsible cards
+    // Collapsible cards with ✦ icons
     document.querySelectorAll('.card h2').forEach(header => {
       header.addEventListener('click', () => {
         const card = header.parentElement;
         card.classList.toggle('active');
-        header.querySelector('.icon').textContent = card.classList.contains('active') ? '-' : '+';
       });
     });
   </script>
