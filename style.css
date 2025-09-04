@@ -7,6 +7,7 @@ body {
   line-height: 1.7;
   position: relative;
   overflow-x: hidden;
+  font-size: 1rem; /* ensure consistent body text size */
 }
 
 /* Sparkle Overlay */
@@ -99,6 +100,7 @@ body::before {
   border-color: #c5a46d;
   box-shadow: 0 8px 20px rgba(197, 164, 109, 0.4);
 }
+
 .card a {
   font-weight: bold;
   font-size: 1.3rem;
@@ -107,6 +109,7 @@ body::before {
   position: relative;
   transition: color 0.3s ease, text-shadow 0.3s ease;
   text-decoration: none; /* removes default underline */
+  cursor: pointer; /* make links always show pointer */
 }
 
 /* Magical underline effect */
@@ -153,13 +156,13 @@ body::before {
 .icon {
   transition: transform 0.3s ease;
   display: inline-block;
+  cursor: pointer; /* NEW: make ✦ icon clickable with pointer cursor */
 }
 
 .card.active .icon {
   transform: rotate(45deg);   /* ✦ rotates */
   color: #a46c93;             /* highlight color */
 }
-
 
 /* Section Boxes */
 section {
